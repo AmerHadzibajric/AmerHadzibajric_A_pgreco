@@ -1,6 +1,5 @@
 #include <LiquidCrystal_I2C.h>
 #include <LiquidCrystal.h>
-//LiquidCrystal lcd (14, 11, 9, 7, 3, 1);
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 int bottone1 = 7;
@@ -13,7 +12,7 @@ int vite = 5;
 int punti = 0;
 void setup() {
   // put your setup code here, to run once:
-  //lcd.begin(16, 2);
+  
   lcd.init();
   lcd.backlight();
   pinMode(bottone1, INPUT);
