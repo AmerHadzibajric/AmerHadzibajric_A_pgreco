@@ -1,7 +1,6 @@
 #include <LiquidCrystal_I2C.h>
 #include <LiquidCrystal.h>
 LiquidCrystal_I2C lcd(0x27, 16, 2);
-
 int bottone1 = 7;
 int bottone2 = 8;
 int bottone3 = 9;
@@ -12,7 +11,6 @@ int vite = 5;
 int punti = 0;
 void setup() {
   // put your setup code here, to run once:
-  
   lcd.init();
   lcd.backlight();
   pinMode(bottone1, INPUT);
@@ -22,7 +20,6 @@ void setup() {
   pinMode(bottone5, INPUT);
   pinMode(btnInizio, INPUT);
 }
-
 void loop() {
   // put your main code here, to run repeatedly:
   while(digitalRead(btnInizio) == LOW){}
@@ -37,7 +34,6 @@ void loop() {
     if (posizione == 1)
     {
       posizione = 2;
-
     }
     else if (posizione == 2)
     {
@@ -55,7 +51,6 @@ void loop() {
     {
       posizione = 14;
     }
-
     lcd.setCursor(posizione, 1);
     lcd.print("π");
     int premuto = 0;
@@ -94,7 +89,6 @@ void loop() {
     {
       vite = vite - 1;
     }
-
     lcd.print("vite:" + String(vite));
     lcd.setCursor(10, 0);
     lcd.print("pt:" + String(punti));
